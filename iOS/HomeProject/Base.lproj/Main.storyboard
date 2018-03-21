@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-Light</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="mRW-Td-JRu">
+                                <rect key="frame" x="20" y="40" width="374" height="34"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mxY-U0-PNY">
+                                        <rect key="frame" x="0.0" y="0.0" width="174" height="34"/>
+                                        <color key="backgroundColor" red="0.31217616580310881" green="0.31217616580310881" blue="0.31217616580310881" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Select Image"/>
+                                        <connections>
+                                            <action selector="selectImageAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ESL-fY-Dhe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AkL-QY-jAs">
+                                        <rect key="frame" x="200" y="0.0" width="174" height="34"/>
+                                        <color key="backgroundColor" red="0.31217616580000002" green="0.31217616580000002" blue="0.31217616580000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Take Photo"/>
+                                        <connections>
+                                            <action selector="takePhotoAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vys-LK-UMH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="WFm-Gi-a5B">
+                                <rect key="frame" x="20" y="91" width="374" height="446"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="grj-Kb-82p">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="374"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="grj-Kb-82p" secondAttribute="height" multiplier="1:1" id="BeE-OP-40T"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="vdi-3B-Fad">
+                                        <rect key="frame" x="0.0" y="380.66666666666669" width="374" height="110"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="110" placeholder="YES" id="PEm-p7-m2b"/>
+                                        </constraints>
+                                    </stackView>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="3eX-qH-qDX">
+                                        <rect key="frame" x="0.0" y="387" width="374" height="20"/>
+                                    </activityIndicatorView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XOB-9D-NMM">
+                                        <rect key="frame" x="0.0" y="420" width="374" height="26"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mRW-Td-JRu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="0CP-AQ-5ke"/>
+                            <constraint firstItem="WFm-Gi-a5B" firstAttribute="leading" secondItem="mRW-Td-JRu" secondAttribute="leading" id="CEh-Co-bF8"/>
+                            <constraint firstItem="WFm-Gi-a5B" firstAttribute="top" secondItem="mRW-Td-JRu" secondAttribute="bottom" constant="16.999999999999972" id="GRC-Og-c5c"/>
+                            <constraint firstItem="WFm-Gi-a5B" firstAttribute="trailing" secondItem="mRW-Td-JRu" secondAttribute="trailing" id="MPG-A1-FNs"/>
+                            <constraint firstItem="mRW-Td-JRu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="a84-dV-nuX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mRW-Td-JRu" secondAttribute="trailing" constant="20" id="jow-6W-0we"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="3eX-qH-qDX" id="jNj-pU-pMp"/>
+                        <outlet property="imageView" destination="grj-Kb-82p" id="560-cb-AdA"/>
+                        <outlet property="lblEmotion" destination="XOB-9D-NMM" id="kbf-tH-MSe"/>
+                        <outlet property="multiFacesStackView" destination="vdi-3B-Fad" id="kJE-nH-GPB"/>
+                        <outlet property="stackView" destination="WFm-Gi-a5B" id="c5v-eM-0Vs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="31.884057971014496" y="86.413043478260875"/>
+        </scene>
+    </scenes>
+</document>
