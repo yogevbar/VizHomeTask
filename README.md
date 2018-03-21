@@ -10,3 +10,8 @@ $ cd iOS
 $ pod install
 ```
 
+## Run
+```sh
+$ npm start
+```
+
